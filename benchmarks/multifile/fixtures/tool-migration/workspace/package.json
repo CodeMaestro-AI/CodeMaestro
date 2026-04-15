@@ -1,0 +1,6 @@
+{
+  "name": "tool-migration-workspace",
+  "version": "1.0.0",
+  "description": "Tool library with patch capabilities",
+  "main": "src/capabilities/index.js"
+}

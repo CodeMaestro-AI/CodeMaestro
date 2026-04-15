@@ -1,0 +1,216 @@
+{
+  "suite": "multifile",
+  "agent": "red-exec",
+  "model": "deepseek-chat",
+  "date": "2026-04-12",
+  "fixtures": 3,
+  "results": [
+    {
+      "fixture": "module-split",
+      "total": 12,
+      "passed": 12,
+      "failed": 0,
+      "pass_rate": 1,
+      "checks": [
+        {
+          "id": "setup-exists",
+          "pass": true,
+          "detail": "exists"
+        },
+        {
+          "id": "exec-exists",
+          "pass": true,
+          "detail": "exists"
+        },
+        {
+          "id": "postproc-exists",
+          "pass": true,
+          "detail": "exists"
+        },
+        {
+          "id": "setup-compiles",
+          "pass": true,
+          "detail": "compiles OK"
+        },
+        {
+          "id": "exec-compiles",
+          "pass": true,
+          "detail": "compiles OK"
+        },
+        {
+          "id": "postproc-compiles",
+          "pass": true,
+          "detail": "compiles OK"
+        },
+        {
+          "id": "pipeline-compiles",
+          "pass": true,
+          "detail": "compiles OK"
+        },
+        {
+          "id": "setup-exports",
+          "pass": true,
+          "detail": "exports match: runPipelineSetup"
+        },
+        {
+          "id": "exec-exports",
+          "pass": true,
+          "detail": "exports match: runFileStream, runExecutionPhases"
+        },
+        {
+          "id": "postproc-exports",
+          "pass": true,
+          "detail": "exports match: runPostProcessing"
+        },
+        {
+          "id": "pipeline-exports",
+          "pass": true,
+          "detail": "exports match: runRedInPipeline"
+        },
+        {
+          "id": "pipeline-delegates",
+          "pass": true,
+          "detail": "2/2 tests passed"
+        }
+      ]
+    },
+    {
+      "fixture": "pipeline-skeleton",
+      "total": 11,
+      "passed": 10,
+      "failed": 1,
+      "pass_rate": 0.909,
+      "checks": [
+        {
+          "id": "xml-exists",
+          "pass": true,
+          "detail": "exists"
+        },
+        {
+          "id": "index-exists",
+          "pass": true,
+          "detail": "exists"
+        },
+        {
+          "id": "agents-exists",
+          "pass": true,
+          "detail": "exists"
+        },
+        {
+          "id": "machine-exists",
+          "pass": true,
+          "detail": "exists"
+        },
+        {
+          "id": "index-compiles",
+          "pass": true,
+          "detail": "compiles OK"
+        },
+        {
+          "id": "machine-compiles",
+          "pass": true,
+          "detail": "compiles OK"
+        },
+        {
+          "id": "agents-valid-json",
+          "pass": true,
+          "detail": "valid JSON"
+        },
+        {
+          "id": "index-exports",
+          "pass": true,
+          "detail": "exports match: runStage"
+        },
+        {
+          "id": "xml-has-plan-stage",
+          "pass": true,
+          "detail": "contains /PLAN/"
+        },
+        {
+          "id": "machine-exports",
+          "pass": true,
+          "detail": "1/1 tests passed"
+        },
+        {
+          "id": "package-has-xstate",
+          "pass": false,
+          "detail": "missing /xstate/"
+        }
+      ]
+    },
+    {
+      "fixture": "tool-migration",
+      "total": 13,
+      "passed": 5,
+      "failed": 8,
+      "pass_rate": 0.385,
+      "checks": [
+        {
+          "id": "srt-exists",
+          "pass": true,
+          "detail": "exists"
+        },
+        {
+          "id": "srt-compiles",
+          "pass": true,
+          "detail": "compiles OK"
+        },
+        {
+          "id": "tools-index-compiles",
+          "pass": false,
+          "detail": "compile error: Cannot find module './PatchTool'"
+        },
+        {
+          "id": "patchfile-compiles",
+          "pass": false,
+          "detail": "compile error: Unexpected identifier 'examples'"
+        },
+        {
+          "id": "capindex-compiles",
+          "pass": false,
+          "detail": "compile error: Cannot find module './PatchTool'"
+        },
+        {
+          "id": "editing-compiles",
+          "pass": true,
+          "detail": "compiles OK"
+        },
+        {
+          "id": "srt-exports",
+          "pass": false,
+          "detail": "missing: SearchReplaceTool"
+        },
+        {
+          "id": "tools-index-exports-srt",
+          "pass": false,
+          "detail": "load error: Cannot find module './PatchTool'"
+        },
+        {
+          "id": "confirmpatch-deleted",
+          "pass": true,
+          "detail": "absent"
+        },
+        {
+          "id": "patchtool-deleted",
+          "pass": true,
+          "detail": "absent"
+        },
+        {
+          "id": "srt-has-execute",
+          "pass": false,
+          "detail": "0/1 passed — execute-method: error: mod.SearchReplaceTool is not a constructor"
+        },
+        {
+          "id": "patchfile-uses-srt",
+          "pass": false,
+          "detail": "0/1 passed — no-old-schema: returned falsy"
+        },
+        {
+          "id": "capindex-clean",
+          "pass": false,
+          "detail": "0/1 passed — no-confirmpatch: returned falsy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+src/tools/SearchReplaceTool.js
+src/tools/PatchFile.js
+src/tools/PatchTool.js
+src/tools/ConfirmPatch.js
+src/capabilities/index.js

@@ -1,0 +1,13 @@
+{
+  "name": "pipeline-workspace",
+  "version": "1.0.0",
+  "description": "Multi-system pipeline workspace",
+  "main": "index.js",
+  "type": "commonjs",
+  "dependencies": {
+    "xstate": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

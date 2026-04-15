@@ -1,0 +1,134 @@
+[
+  {
+    "id": "setup-exists",
+    "type": "file_exists",
+    "path": "lib/setup.js",
+    "description": "lib/setup.js was created"
+  },
+  {
+    "id": "setup-compiles",
+    "type": "runtime_load",
+    "path": "lib/setup.js",
+    "description": "lib/setup.js loads without errors"
+  },
+  {
+    "id": "setup-exports-initConfig",
+    "type": "runtime_exports",
+    "path": "lib/setup.js",
+    "exports": { "initConfig": "function" },
+    "description": "lib/setup.js exports initConfig"
+  },
+  {
+    "id": "setup-exports-validateEnvironment",
+    "type": "runtime_exports",
+    "path": "lib/setup.js",
+    "exports": { "validateEnvironment": "function" },
+    "description": "lib/setup.js exports validateEnvironment"
+  },
+  {
+    "id": "setup-exports-loadPlugins",
+    "type": "runtime_exports",
+    "path": "lib/setup.js",
+    "exports": { "loadPlugins": "function" },
+    "description": "lib/setup.js exports loadPlugins"
+  },
+  {
+    "id": "setup-exports-createContext",
+    "type": "runtime_exports",
+    "path": "lib/setup.js",
+    "exports": { "createContext": "function" },
+    "description": "lib/setup.js exports createContext"
+  },
+  {
+    "id": "execution-exists",
+    "type": "file_exists",
+    "path": "lib/execution.js",
+    "description": "lib/execution.js was created"
+  },
+  {
+    "id": "execution-compiles",
+    "type": "runtime_load",
+    "path": "lib/execution.js",
+    "description": "lib/execution.js loads without errors"
+  },
+  {
+    "id": "execution-exports-executeTask",
+    "type": "runtime_exports",
+    "path": "lib/execution.js",
+    "exports": { "executeTask": "function" },
+    "description": "lib/execution.js exports executeTask"
+  },
+  {
+    "id": "execution-exports-processQueue",
+    "type": "runtime_exports",
+    "path": "lib/execution.js",
+    "exports": { "processQueue": "function" },
+    "description": "lib/execution.js exports processQueue"
+  },
+  {
+    "id": "execution-exports-runStep",
+    "type": "runtime_exports",
+    "path": "lib/execution.js",
+    "exports": { "runStep": "function" },
+    "description": "lib/execution.js exports runStep"
+  },
+  {
+    "id": "execution-exports-handleError",
+    "type": "runtime_exports",
+    "path": "lib/execution.js",
+    "exports": { "handleError": "function" },
+    "description": "lib/execution.js exports handleError"
+  },
+  {
+    "id": "postProcess-exists",
+    "type": "file_exists",
+    "path": "lib/postProcess.js",
+    "description": "lib/postProcess.js was created"
+  },
+  {
+    "id": "postProcess-compiles",
+    "type": "runtime_load",
+    "path": "lib/postProcess.js",
+    "description": "lib/postProcess.js loads without errors"
+  },
+  {
+    "id": "postProcess-exports-collectResults",
+    "type": "runtime_exports",
+    "path": "lib/postProcess.js",
+    "exports": { "collectResults": "function" },
+    "description": "lib/postProcess.js exports collectResults"
+  },
+  {
+    "id": "postProcess-exports-formatReport",
+    "type": "runtime_exports",
+    "path": "lib/postProcess.js",
+    "exports": { "formatReport": "function" },
+    "description": "lib/postProcess.js exports formatReport"
+  },
+  {
+    "id": "postProcess-exports-writeOutput",
+    "type": "runtime_exports",
+    "path": "lib/postProcess.js",
+    "exports": { "writeOutput": "function" },
+    "description": "lib/postProcess.js exports writeOutput"
+  },
+  {
+    "id": "postProcess-exports-cleanup",
+    "type": "runtime_exports",
+    "path": "lib/postProcess.js",
+    "exports": { "cleanup": "function" },
+    "description": "lib/postProcess.js exports cleanup"
+  },
+  {
+    "id": "runner-exists",
+    "type": "file_exists",
+    "path": "lib/runner.js",
+    "description": "lib/runner.js still exists (not deleted)"
+  },
+  {
+    "id": "runner-compiles",
+    "type": "runtime_load",
+    "path": "lib/runner.js",
+    "description": "lib/runner.js still compiles cleanly"
+  }
+]

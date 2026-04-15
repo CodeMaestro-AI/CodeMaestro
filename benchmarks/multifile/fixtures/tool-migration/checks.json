@@ -1,0 +1,100 @@
+[
+  {
+    "id": "srt-exists",
+    "type": "file_exists",
+    "path": "src/tools/SearchReplaceTool.js",
+    "tier": 1,
+    "description": "SearchReplaceTool.js was created"
+  },
+  {
+    "id": "srt-compiles",
+    "type": "node_compiles",
+    "path": "src/tools/SearchReplaceTool.js",
+    "tier": 1,
+    "description": "SearchReplaceTool.js has no syntax errors"
+  },
+  {
+    "id": "patchfile-exists",
+    "type": "file_exists",
+    "path": "src/tools/PatchFile.js",
+    "tier": 1,
+    "description": "PatchFile.js still exists (updated, not deleted)"
+  },
+  {
+    "id": "patchfile-compiles",
+    "type": "node_compiles",
+    "path": "src/tools/PatchFile.js",
+    "tier": 1,
+    "description": "PatchFile.js has no syntax errors"
+  },
+  {
+    "id": "capindex-compiles",
+    "type": "node_compiles",
+    "path": "src/capabilities/index.js",
+    "tier": 1,
+    "description": "capabilities/index.js has no syntax errors"
+  },
+  {
+    "id": "srt-exports-class",
+    "type": "exports_symbol",
+    "path": "src/tools/SearchReplaceTool.js",
+    "symbol": "SearchReplaceTool",
+    "symbol_type": "function",
+    "tier": 2,
+    "description": "SearchReplaceTool.js exports the SearchReplaceTool class"
+  },
+  {
+    "id": "patchtool-deleted",
+    "type": "file_not_exists",
+    "path": "src/tools/PatchTool.js",
+    "tier": 2,
+    "description": "PatchTool.js was deleted"
+  },
+  {
+    "id": "confirmpatch-deleted",
+    "type": "file_not_exists",
+    "path": "src/tools/ConfirmPatch.js",
+    "tier": 2,
+    "description": "ConfirmPatch.js was deleted"
+  },
+  {
+    "id": "patchfile-no-pending",
+    "type": "content_absent",
+    "path": "src/tools/PatchFile.js",
+    "pattern": "hasPendingPatch",
+    "tier": 2,
+    "description": "PatchFile.js no longer has hasPendingPatch method"
+  },
+  {
+    "id": "capindex-exports-srt",
+    "type": "content_match",
+    "path": "src/capabilities/index.js",
+    "pattern": "SearchReplaceTool",
+    "tier": 2,
+    "description": "capabilities/index.js exports SearchReplaceTool"
+  },
+  {
+    "id": "capindex-no-patchtool",
+    "type": "content_absent",
+    "path": "src/capabilities/index.js",
+    "pattern": "PatchTool",
+    "tier": 3,
+    "description": "capabilities/index.js no longer references PatchTool"
+  },
+  {
+    "id": "capindex-no-confirmpatch",
+    "type": "content_absent",
+    "path": "src/capabilities/index.js",
+    "pattern": "ConfirmPatch",
+    "tier": 3,
+    "description": "capabilities/index.js no longer references ConfirmPatch"
+  },
+  {
+    "id": "srt-has-execute",
+    "type": "content_match",
+    "path": "src/tools/SearchReplaceTool.js",
+    "pattern": "execute",
+    "tier": 3,
+    "description": "SearchReplaceTool has an execute method"
+  }
+]

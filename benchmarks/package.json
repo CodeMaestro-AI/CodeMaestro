@@ -1,0 +1,14 @@
+{
+  "name": "red-exec-benchmarks",
+  "version": "0.1.0",
+  "description": "Agent-agnostic coding benchmark suite",
+  "scripts": {
+    "setup": "node setup.js",
+    "polyglot": "echo Polyglot runner not yet standalone — use red-exec binary: red-exec --benchmark polyglot",
+    "multifile": "node run-multifile.js",
+    "compare": "node compare.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "suite": "polyglot",
+  "agent": "red-exec",
+  "model": "deepseek-chat",
+  "date": "2026-04-12",
+  "exercises": 49,
+  "passed": 49,
+  "pass_rate": 1,
+  "total_wall_time_s": 12216.3,
+  "results": [
+    {
+      "exercise": "affine-cipher",
+      "status": "PASS",
+      "time_s": 245.6,
+      "tokens": 18700,
+      "calls": 14
+    },
+    {
+      "exercise": "alphametics",
+      "status": "PASS",
+      "time_s": 213,
+      "tokens": 12882,
+      "calls": 9
+    },
+    {
+      "exercise": "beer-song",
+      "status": "PASS",
+      "time_s": 227.3,
+      "tokens": 11400,
+      "calls": 9
+    },
+    {
+      "exercise": "binary",
+      "status": "PASS",
+      "time_s": 193.9,
+      "tokens": 7867,
+      "calls": 5
+    },
+    {
+      "exercise": "book-store",
+      "status": "PASS",
+      "time_s": 261.4,
+      "tokens": 14238,
+      "calls": 11
+    },
+    {
+      "exercise": "bottle-song",
+      "status": "PASS",
+      "time_s": 211.6,
+      "tokens": 15556,
+      "calls": 10
+    },
+    {
+      "exercise": "bowling",
+      "status": "PASS",
+      "time_s": 317.3,
+      "tokens": 23873,
+      "calls": 8
+    },
+    {
+      "exercise": "complex-numbers",
+      "status": "PASS",
+      "time_s": 405.1,
+      "tokens": 27002,
+      "calls": 13
+    },
+    {
+      "exercise": "connect",
+      "status": "PASS",
+      "time_s": 299,
+      "tokens": 14971,
+      "calls": 14
+    },
+    {
+      "exercise": "food-chain",
+      "status": "PASS",
+      "time_s": 194.5,
+      "tokens": 15348,
+      "calls": 7
+    },
+    {
+      "exercise": "forth",
+      "status": "PASS",
+      "time_s": 206.9,
+      "tokens": 13604,
+      "calls": 7
+    },
+    {
+      "exercise": "go-counting",
+      "status": "PASS",
+      "time_s": 218.9,
+      "tokens": 17146,
+      "calls": 9
+    },
+    {
+      "exercise": "grade-school",
+      "status": "PASS",
+      "time_s": 244.3,
+      "tokens": 13122,
+      "calls": 11
+    },
+    {
+      "exercise": "grep",
+      "status": "PASS",
+      "time_s": 122.5,
+      "tokens": 9848,
+      "calls": 3
+    },
+    {
+      "exercise": "house",
+      "status": "PASS",
+      "time_s": 230.2,
+      "tokens": 13011,
+      "calls": 8
+    },
+    {
+      "exercise": "killer-sudoku-helper",
+      "status": "PASS",
+      "time_s": 194.6,
+      "tokens": 10879,
+      "calls": 9
+    },
+    {
+      "exercise": "ledger",
+      "status": "PASS",
+      "time_s": 95.6,
+      "tokens": 9486,
+      "calls": 2
+    },
+    {
+      "exercise": "list-ops",
+      "status": "PASS",
+      "time_s": 384.7,
+      "tokens": 25874,
+      "calls": 17
+    },
+    {
+      "exercise": "meetup",
+      "status": "PASS",
+      "time_s": 226.4,
+      "tokens": 13814,
+      "calls": 10
+    },
+    {
+      "exercise": "ocr-numbers",
+      "status": "PASS",
+      "time_s": 158.8,
+      "tokens": 11926,
+      "calls": 5
+    },
+    {
+      "exercise": "palindrome-products",
+      "status": "PASS",
+      "time_s": 275.8,
+      "tokens": 15205,
+      "calls": 11
+    },
+    {
+      "exercise": "parallel-letter-frequency",
+      "status": "PASS",
+      "time_s": 182.7,
+      "tokens": 11705,
+      "calls": 9
+    },
+    {
+      "exercise": "phone-number",
+      "status": "PASS",
+      "time_s": 193.4,
+      "tokens": 9311,
+      "calls": 3
+    },
+    {
+      "exercise": "pig-latin",
+      "status": "PASS",
+      "time_s": 244.5,
+      "tokens": 8722,
+      "calls": 5
+    },
+    {
+      "exercise": "poker",
+      "status": "PASS",
+      "time_s": 194.6,
+      "tokens": 14626,
+      "calls": 8
+    },
+    {
+      "exercise": "promises",
+      "status": "PASS",
+      "time_s": 347.2,
+      "tokens": 21730,
+      "calls": 10
+    },
+    {
+      "exercise": "queen-attack",
+      "status": "PASS",
+      "time_s": 403.2,
+      "tokens": 13991,
+      "calls": 12
+    },
+    {
+      "exercise": "rational-numbers",
+      "status": "PASS",
+      "time_s": 366.4,
+      "tokens": 25936,
+      "calls": 13
+    },
+    {
+      "exercise": "react",
+      "status": "PASS",
+      "time_s": 295.2,
+      "tokens": 20502,
+      "calls": 14
+    },
+    {
+      "exercise": "rectangles",
+      "status": "PASS",
+      "time_s": 223.2,
+      "tokens": 16668,
+      "calls": 11
+    },
+    {
+      "exercise": "resistor-color-trio",
+      "status": "PASS",
+      "time_s": 243.9,
+      "tokens": 10133,
+      "calls": 10
+    },
+    {
+      "exercise": "rest-api",
+      "status": "PASS",
+      "time_s": 265.2,
+      "tokens": 16275,
+      "calls": 14
+    },
+    {
+      "exercise": "robot-name",
+      "status": "PASS",
+      "time_s": 138.3,
+      "tokens": 5572,
+      "calls": 2
+    },
+    {
+      "exercise": "say",
+      "status": "PASS",
+      "time_s": 190.2,
+      "tokens": 7445,
+      "calls": 3
+    },
+    {
+      "exercise": "scale-generator",
+      "status": "PASS",
+      "time_s": 454.6,
+      "tokens": 20511,
+      "calls": 20
+    },
+    {
+      "exercise": "simple-linked-list",
+      "status": "PASS",
+      "time_s": 334.3,
+      "tokens": 25313,
+      "calls": 19
+    },
+    {
+      "exercise": "space-age",
+      "status": "PASS",
+      "time_s": 214.5,
+      "tokens": 9189,
+      "calls": 10
+    },
+    {
+      "exercise": "state-of-tic-tac-toe",
+      "status": "PASS",
+      "time_s": 340.3,
+      "tokens": 13597,
+      "calls": 10
+    },
+    {
+      "exercise": "sum-of-multiples",
+      "status": "PASS",
+      "time_s": 183.8,
+      "tokens": 8687,
+      "calls": 8
+    },
+    {
+      "exercise": "tournament",
+      "status": "PASS",
+      "time_s": 256.8,
+      "tokens": 15214,
+      "calls": 11
+    },
+    {
+      "exercise": "transpose",
+      "status": "PASS",
+      "time_s": 197,
+      "tokens": 8916,
+      "calls": 8
+    },
+    {
+      "exercise": "triangle",
+      "status": "PASS",
+      "time_s": 221.6,
+      "tokens": 12353,
+      "calls": 7
+    },
+    {
+      "exercise": "twelve-days",
+      "status": "PASS",
+      "time_s": 205.5,
+      "tokens": 17363,
+      "calls": 11
+    },
+    {
+      "exercise": "two-bucket",
+      "status": "PASS",
+      "time_s": 236.8,
+      "tokens": 14595,
+      "calls": 9
+    },
+    {
+      "exercise": "variable-length-quantity",
+      "status": "PASS",
+      "time_s": 277.4,
+      "tokens": 12998,
+      "calls": 13
+    },
+    {
+      "exercise": "word-search",
+      "status": "PASS",
+      "time_s": 233.9,
+      "tokens": 17612,
+      "calls": 14
+    },
+    {
+      "exercise": "wordy",
+      "status": "PASS",
+      "time_s": 233.5,
+      "tokens": 12651,
+      "calls": 5
+    },
+    {
+      "exercise": "zebra-puzzle",
+      "status": "PASS",
+      "time_s": 307.9,
+      "tokens": 21807,
+      "calls": 9
+    },
+    {
+      "exercise": "zipper",
+      "status": "PASS",
+      "time_s": 303.1,
+      "tokens": 25724,
+      "calls": 15
+    }
+  ]
+}

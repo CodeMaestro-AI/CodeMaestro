@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="triage" version="1.0">
+  <description>Triage system: classifies incoming tasks and routes them to appropriate handlers.</description>
+
+  <stages>
+    <stage id="CLASSIFY" order="1">
+      <description>Classify the input task by type and priority.</description>
+      <agent ref="default" />
+      <config>
+        <timeout>30000</timeout>
+        <retries>2</retries>
+      </config>
+    </stage>
+
+    <stage id="ROUTE" order="2">
+      <description>Determine the target handler based on classification result.</description>
+      <agent ref="default" />
+      <config>
+        <timeout>10000</timeout>
+        <retries>1</retries>
+      </config>
+    </stage>
+  </stages>
+
+  <agents>
+    <agent id="default" config="agents/default.json" />
+  </agents>
+
+  <outputs>
+    <evidence type="triage_result" description="Classification and routing decision." />
+  </outputs>
+</system>

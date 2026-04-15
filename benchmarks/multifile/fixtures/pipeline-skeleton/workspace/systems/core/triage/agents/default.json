@@ -1,0 +1,6 @@
+{
+  "name": "triage-default",
+  "model": "gpt-4o",
+  "temperature": 0.2,
+  "maxTokens": 1024
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "id": "xml-exists",
+    "type": "file_exists",
+    "path": "systems/core/pcc-arc/pcc-arc.xml",
+    "tier": 1,
+    "description": "pcc-arc XML manifest exists"
+  },
+  {
+    "id": "index-exists",
+    "type": "file_exists",
+    "path": "systems/core/pcc-arc/index.js",
+    "tier": 1,
+    "description": "pcc-arc entry point exists"
+  },
+  {
+    "id": "agents-exists",
+    "type": "file_exists",
+    "path": "systems/core/pcc-arc/agents/default.json",
+    "tier": 1,
+    "description": "pcc-arc agent config exists"
+  },
+  {
+    "id": "machine-exists",
+    "type": "file_exists",
+    "path": "systems/core/pcc-arc/lib/pipelineMachine.js",
+    "tier": 1,
+    "description": "pcc-arc pipeline state machine exists"
+  },
+  {
+    "id": "index-compiles",
+    "type": "node_compiles",
+    "path": "systems/core/pcc-arc/index.js",
+    "tier": 1,
+    "description": "index.js has no syntax errors"
+  },
+  {
+    "id": "machine-compiles",
+    "type": "node_compiles",
+    "path": "systems/core/pcc-arc/lib/pipelineMachine.js",
+    "tier": 1,
+    "description": "pipelineMachine.js has no syntax errors"
+  },
+  {
+    "id": "agents-valid-json",
+    "type": "valid_json",
+    "path": "systems/core/pcc-arc/agents/default.json",
+    "tier": 1,
+    "description": "agents/default.json is valid JSON"
+  },
+  {
+    "id": "index-exports-runStage",
+    "type": "exports_symbol",
+    "path": "systems/core/pcc-arc/index.js",
+    "symbol": "runStage",
+    "symbol_type": "function",
+    "tier": 2,
+    "description": "index.js exports a runStage function"
+  },
+  {
+    "id": "xml-has-plan-stage",
+    "type": "content_match",
+    "path": "systems/core/pcc-arc/pcc-arc.xml",
+    "pattern": "PLAN",
+    "tier": 2,
+    "description": "pcc-arc.xml defines a PLAN stage"
+  },
+  {
+    "id": "machine-exports-machine",
+    "type": "exports_symbol",
+    "path": "systems/core/pcc-arc/lib/pipelineMachine.js",
+    "symbol": "pipelineMachine",
+    "tier": 2,
+    "description": "pipelineMachine.js exports pipelineMachine"
+  },
+  {
+    "id": "package-has-xstate",
+    "type": "content_match",
+    "path": "package.json",
+    "pattern": "xstate",
+    "tier": 2,
+    "description": "package.json lists xstate as a dependency"
+  }
+]

@@ -1,0 +1,4 @@
+systems/core/pcc-arc/pcc-arc.xml
+systems/core/pcc-arc/index.js
+systems/core/pcc-arc/agents/default.json
+systems/core/pcc-arc/lib/pipelineMachine.js

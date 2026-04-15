@@ -1,0 +1,11 @@
+{
+  "name": "module-split-workspace",
+  "version": "1.0.0",
+  "description": "Task workspace: split runner.js into focused modules",
+  "scripts": {
+    "test": "node test/runner.test.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
