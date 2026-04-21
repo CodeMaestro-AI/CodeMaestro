@@ -17,11 +17,11 @@ No Node.js, no `npm install`, no cloning. Download one file, set your API key, r
 
 ### 1. Pick your binary
 
-| Platform | File | Size |
-|---|---|---|
-| Windows x64 | `red-exec-win-x64.exe` | 72 MB |
-| Linux x64 (Ubuntu, Debian, etc.) | `red-exec-linux-x64` | 55 MB |
-| macOS x64 (Intel, or Apple Silicon via Rosetta 2) | `red-exec-macos-x64` | 60 MB |
+| Platform | File | Size |Link|
+|---|---|---|---|
+| Windows x64 | `red-exec-win-x64.exe` | 72 MB | https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-win-x64.exe|
+| Linux x64 (Ubuntu, Debian, etc.) | `red-exec-linux-x64` | 55 MB |https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-linux-x64|
+| macOS x64 (Intel, or Apple Silicon via Rosetta 2) | `red-exec-macos-x64` | 60 MB |https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-macos-x64|
 
 ### 2. Set your API key
 
