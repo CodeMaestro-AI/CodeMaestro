@@ -13,7 +13,7 @@ The CLI command is `red-exec`.
 
 ## Quick Start (Standalone Binary)
 
-No Node.js, no `npm install`, no cloning. Download one file, set your API key, run.
+Download one file, set your API key, run.
 (Benchmarks require Node.js 18+ — see [Prerequisites](#prerequisites).)
 
 ### 1. Pick your binary
