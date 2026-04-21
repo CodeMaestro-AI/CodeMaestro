@@ -211,7 +211,7 @@ red-exec --benchmark multifile --task module-split
 red-exec --benchmark polyglot
 
 # Single exercise
-red-exec --benchmark polyglot --exercise bowling
+red-exec --benchmark polyglot --exercise triangle
 ```
 
 ### Path 2: Via the benchmark folder (any agent)
