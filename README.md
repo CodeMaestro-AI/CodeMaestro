@@ -14,14 +14,15 @@ The CLI command is `red-exec`.
 ## Quick Start (Standalone Binary)
 
 No Node.js, no `npm install`, no cloning. Download one file, set your API key, run.
+(Benchmarks require Node.js 18+ — see [Prerequisites](#prerequisites).)
 
 ### 1. Pick your binary
 
-| Platform | File | Size |Link|
-|---|---|---|---|
-| Windows x64 | `red-exec-win-x64.exe` | 72 MB | https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-win-x64.exe|
-| Linux x64 (Ubuntu, Debian, etc.) | `red-exec-linux-x64` | 55 MB |https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-linux-x64|
-| macOS x64 (Intel, or Apple Silicon via Rosetta 2) | `red-exec-macos-x64` | 60 MB |https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-macos-x64|
+| Platform | File | Size |
+|---|---|---|
+| Windows x64 | `red-exec-win-x64.exe` | ~91 MB |
+| Linux x64 (Ubuntu, Debian, etc.) | `red-exec-linux-x64` | ~100 MB |
+| macOS x64 (Intel, or Apple Silicon via Rosetta 2) | `red-exec-macos-x64` | ~104 MB |
 
 ### 2. Set your API key
 
@@ -145,7 +146,9 @@ If you find yourself writing a paragraph-long task description to explain what y
 
 ## Prerequisites
 
-No prerequisites. The binary is standalone -- no Node.js, no package manager, no dependencies.
+**For running tasks:** No prerequisites. The binary is standalone -- no Node.js, no package manager, no dependencies.
+
+**For running benchmarks (`--benchmark`):** Node.js 18+ and npm must be installed on the target machine. The benchmark runner shells out to `npm install` and `npx jest` to install exercise dependencies and run tests.
 
 ---
 
