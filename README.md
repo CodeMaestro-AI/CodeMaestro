@@ -527,4 +527,3 @@ xattr -d com.apple.quarantine ./red-exec-macos-x64
 |---|---|---|
 | `ALPHA-NOTES.md` | Co-architects / testers | What works, what doesn't, design decisions to challenge |
 | `PHILOSOPHY.md` | Technical readers | "Constrained Attention Is What You Need" -- the architectural thesis |
-| `INVESTOR-BRIEF.md` | Business / investors | Market problem, proof points, unit economics, defensibility |
