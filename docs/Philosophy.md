@@ -1,8 +1,3 @@
----
-title: My Specific Article
-permalink: /my-article/
----
-
 ﻿# Constrained Attention Is What You Need
 
 *A tribute to "Attention Is All You Need" -- and an argument for what comes next.*
