@@ -2,3 +2,158 @@
 title: My Specific Article
 permalink: /my-article/
 ---
+
+﻿# Constrained Attention Is What You Need
+
+*A tribute to "Attention Is All You Need" -- and an argument for what comes next.*
+
+---
+
+## The Audit Question
+
+I spent 20 years as an accountant. Four and a half months ago, I started building an AI coding system. I am not sure I qualify as an engineer -- but I know something about systems that are designed to catch failure.
+
+In accounting, there is a principle so fundamental it is invisible to most people: you never let a single person authorize, execute, and verify their own work. Not because people are dishonest -- but because they are fallible. Segregation of duties, reconciliation, independent audit. The system is designed around the assumption that any individual step can go wrong.
+
+When I started working with AI coding agents, I saw something that would get you fired in any accounting firm: the model writes the code, evaluates its own output, decides if it is done, and moves on. One actor, no separation, no independent verification. If it makes a mistake, it reviews its own mistake with the same context that produced it.
+
+We would never accept this from a human. Why do we accept it from a machine that is, by design, probabilistic?
+
+In every other system, we design for failure. In AI, we design for hope.
+
+---
+
+## The Era of Expanding Attention
+
+In 2017, Vaswani et al. published "Attention Is All You Need." It was one of the most important papers in the history of computing. The transformer architecture proved that attention mechanisms -- the ability to focus on relevant parts of input -- mattered more than depth, more than recurrence, more than raw parameter count.
+
+The industry heard that message and ran with it. But it ran in one direction: expansion.
+
+Bigger context windows. Longer conversations. More tokens per turn. The assumption was that if attention is what you need, then *more* attention must be better. Give the model everything, let it figure out what matters.
+
+This led to agentic loops: systems where the model reads files, writes code, checks results, reads more files, adjusts its plan, loops until done. The context grows with every turn. The model carries the full weight of its own history -- including its mistakes, its abandoned approaches, its accumulated confusion.
+
+We observed the cost of this expansion directly. On a benchmark task, an agentic loop solved the problem, then "optimized" it, broke it, reverted, broke it again -- burning 35,000 tokens in a self-destructive spiral. On a multi-file task, another agent looped for 10 minutes, consuming nearly 2 million tokens before we killed it. It never converged.
+
+These are not edge cases. They are the predictable consequence of unbounded attention.
+
+---
+
+## Constrained Attention
+
+The insight that changed my approach was simple: current LLMs have enough capability for most tasks. Even models that are not the most advanced -- like DeepSeek-chat -- can solve complex problems. What they lack is not intelligence. What they lack is constraint.
+
+Constraint that directs their attention. Constraint that structures how they think through a problem. Constraint that prevents them from wandering, from second-guessing, from accumulating noise.
+
+When you constrain a model's attention -- give it only what it needs for the current step, nothing more -- something remarkable happens. It stops brute-forcing through trial and error. It starts thinking methodically. Not because you made it smarter, but because you removed the distractions that made it worse.
+
+The evidence:
+
+| | Constrained (red-exec) | Unconstrained (agentic loop) | Ratio |
+|---|---|---|---|
+| Pass rate (49 exercises) | 49/49 (100%) | 49/49 (100%) | Equal |
+| Total tokens | 689K | 10,287K | **14.9x fewer** |
+| Wall time | 77 min | 86 min | 1.12x faster |
+
+Same model. Same tasks. Same pass rate. 14.9x fewer tokens. The only difference is architecture.
+
+On multi-file tasks -- where coordination between files is required -- the gap widens further.
+
+We publish a reproducible benchmark suite so anyone can verify these numbers:
+
+| Task | Constrained (red-exec) | Claude Code (Sonnet) | Ratio |
+|---|---|---|---|
+| Module split (20 checks) | 3.9K | 90K | **23x** |
+| Pipeline skeleton (11 checks) | 6.5K | 191K | **29x** |
+| Tool migration (13 checks) | 10.3K | 163K | **16x** |
+| **Total** | **21K** | **444K** | **21x** |
+
+Both systems achieved 100% pass rates. red-exec costs $0.003 per run; Claude Code costs $0.77 -- a 250x cost difference. Run it yourself: `node bin/red-exec.js --benchmark multifile`.
+
+On our internal production codebase -- a 937-line pipeline split, a 7-file tool migration, an xState skeleton with real architectural context -- the same task patterns show 12-49x cost ratios because larger codebases amplify context accumulation in agentic loops while the structured pipeline stays flat:
+
+| Task | Constrained | Claude Code (Sonnet) | Ratio |
+|---|---|---|---|
+| Pipeline split (937 lines) | 10.4K | 473K | **45x** |
+| Tool migration (7 files) | 44K | 547K | **12x** |
+| Pipeline skeleton | 16.2K | 787K | **49x** |
+
+The public benchmarks are the verifiable floor. Real codebases make it wider, not narrower.
+
+But cost is only half the story. The other half is variance.
+
+We ran the same tasks multiple times through each system. The constrained system decomposed the task the same way every time -- same files, same structure, same approach. Token variance across runs: **5.5% of mean**. The agentic loop took a different strategy every run. One run used 2 patches; the next used 10 patches, 8 file writes, and 8 search calls on the same task. Same model, same prompt, completely different execution path. Per-exercise token variance: **59% of mean**.
+
+This is the difference between a system that *knows* how to approach a task and one that *discovers* its approach at runtime. Discovery is expensive, unpredictable, and non-repeatable. Structure is cheap, consistent, and auditable.
+
+This is not a prompt trick. This is architecture.
+
+---
+
+## A Compiler of Human Intent
+
+The best analogy for what we built is a compiler.
+
+A compiler does not explore. It does not iterate. It does not "try things and see what works." It takes high-level intent (source code) and lowers it through structured phases into executable output. Each phase has a defined input, a defined output, and a bounded scope. The phases compose deterministically.
+
+An agentic loop is an interpreter. It processes one line at a time, maintains a running state, and the outcome depends on the entire history of execution. Interpreters are flexible, but they are unpredictable and expensive.
+
+We built a compiler. The human declares intent -- "refactor this module into three files" -- and the system lowers that intent through structured phases into working code. Each phase receives only the context it needs from the previous phase. No phase can see the full history. No phase can decide to go back and try something different.
+
+This is why the cost is predictable. This is why the output is consistent. This is why a smaller model, constrained by the right architecture, outperforms a larger model given unlimited freedom.
+
+The compiler does not need the model to be brilliant. It needs the model to be focused.
+
+---
+
+## The Human as Architect, Not Operator
+
+There is a second meaning to "Constrained Attention" that goes beyond the machine.
+
+Today, developers who use AI coding tools spend their time babysitting the model. They watch it write code, correct its mistakes, re-prompt when it wanders, verify its output line by line. The human's attention is consumed by the mechanics of execution.
+
+This is backwards. The human's attention should be constrained to what only humans can do: defining intent and verifying invariants. Not "did the model write the correct syntax?" but "does this code do what I asked for, and does it meet my constraints?"
+
+The future workflow is what I do every day with my own system: I state what I want. I define what must be true when it is done. I do not tell it how to write the code. I do not check its work line by line. I check whether the outcome satisfies my invariants.
+
+The model handles execution. The human handles intent and governance.
+
+This is not abdication -- it is the same principle that makes organizations work. A CFO does not write the accounting entries. They define the strategy and ensure the controls are in place. The system earns trust through process -- bounded execution, structural checks, traceability -- not through "vibes."
+
+---
+
+## What the Alpha Does Not Do Yet
+
+Honesty requires stating the current boundaries.
+
+The alpha release is the **execution engine** -- the phase that takes a well-defined task and produces code. It is one component of a larger architecture that is designed to handle the full journey from ambiguous intent to verified output.
+
+What the execution engine does not do today:
+
+**Explore before executing.** If the scope is unclear -- "make the app faster" with no further guidance -- the system cannot yet read the codebase, identify bottlenecks, and formulate a plan. Today, you provide the files and the intent. The architecture has phases designed for exploration and context gathering, but they are not yet in the alpha.
+
+**Try multiple approaches.** The engine produces one approach per task. For problems where the optimal solution is not obvious from the spec, it relies on the model's judgment within each phase. The broader architecture is designed to support reasoning about alternatives before committing to execution, but that capability is post-alpha.
+
+**Self-correct beyond structural checks.** If the engine produces code with a subtle logic error that passes syntax validation, it will write it. The engine catches structural errors mechanically -- missing exports, broken syntax, destructive writes -- but semantic correctness depends on the model. Deeper verification is an architectural capability that has not yet been activated.
+
+These are real boundaries of the current release, not permanent limitations of the design. The architecture is built in layers -- execution is the first layer to ship because it is the most provable. The layers that handle exploration, reasoning, and deeper verification are designed but not yet public.
+
+We want to know where you hit these boundaries. That signal tells us which layers to activate next.
+
+---
+
+## The Bet
+
+This is a bet on a specific, testable claim:
+
+**For code generation tasks where the scope and files are known in advance, a system built on constrained attention will produce equivalent-quality code at a fraction of the cost, with higher consistency, than an open-ended agentic loop.**
+
+The data supports the claim. 49/49 single-file exercises at 14.9x fewer tokens. 100% multi-file pass rates at 16-29x fewer tokens (21x average). 3-5% token variance versus 59%.
+
+But benchmarks are controlled environments. Your codebase, your tasks, your expectations are the real test.
+
+We are not asking you to trust the numbers. We are asking you to generate your own.
+
+---
+
+*"Attention is all you need to understand. Constrained attention is what you need to execute."*
