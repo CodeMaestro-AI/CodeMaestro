@@ -1,4 +1,7 @@
-# codeMaestro Alpha
+# CodeMaestro Alpha
+
+Reliable, auditable AI coding execution.
+CodeMaestro turns developer intent into bounded execution phases where every action is traceable, every write is gated, and “done” is verified instead of claimed.
 
 **Version:** 0.1.0-alpha
 **CLI command:** `red-exec`
