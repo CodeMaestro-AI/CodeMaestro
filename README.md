@@ -8,11 +8,18 @@ CodeMaestro turns developer intent into bounded execution phases where every act
 **Default model:** deepseek-chat
 **Language:** JavaScript (CommonJS)
 
-# codeMaestro Alpha
-
 codeMaestro is an alpha AI coding tool built around governed execution instead of open-ended agent loops.
 You give it a task and a bounded file list. The system decomposes the task, generates code in isolated sections, and checks structural invariants before writing.
 The core idea comes from accounting controls: the model should not be the same actor that proposes, verifies, writes, and declares completion.
+
+---
+## Why governed execution?
+
+Most AI coding agents let the same model plan, write, verify, retry, and declare completion.
+From an accounting controls perspective, that is a control failure.
+CodeMaestro explores a different model: bounded execution, constrained attention, invariant gates, and auditable writes.
+
+For the full argument, see [PHILOSOPHY.md](./PHILOSOPHY.md).
 
 ---
 
