@@ -14,7 +14,7 @@ codeMaestro is a structured code generation pipeline. You give it a task and a l
 
 ## Demo: Side-by-side Benchmark
 
-This short demo compares CodeMaestro Alpha against a Claude Code-style baseline on the same `module-split` benchmark.
+This short demo compares CodeMaestro Alpha against a Claude Code baseline on the same `module-split` benchmark.
 
 [Watch the demo video](https://youtu.be/S_-3u3R7db8)
 
