@@ -55,9 +55,9 @@ Download one file, set your API key, run.
 
 | Platform | File | Size | Link |
 |---|---|---|---|
-| Windows x64 | `red-exec-win-x64.exe` | ~102 MB | https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-win-x64.exe |
-| Linux x64 (Ubuntu, Debian, etc.) | `red-exec-linux-x64` | ~110 MB | https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-linux-x64 |
-| macOS x64 (Intel, or Apple Silicon via Rosetta 2) | `red-exec-macos-x64` | ~114 MB | https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-macos-x64 |
+| Windows x64 | `red-exec-win-x64.exe` | ~101 MB | https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-win-x64.exe |
+| Linux x64 (Ubuntu, Debian, etc.) | `red-exec-linux-x64` | ~109 MB | https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-linux-x64 |
+| macOS x64 (Intel, or Apple Silicon via Rosetta 2) | `red-exec-macos-x64` | ~113 MB | https://github.com/CodeMaestro-AI/CodeMaestro/releases/download/alpha-0.1.0/red-exec-macos-x64 |
 
 ### 2. Set your API key
 
