@@ -17,7 +17,7 @@ codeMaestro is a structured code generation pipeline. You give it a task and a l
 | :--- | :--- | :--- |
 | **Pass Rate** | ✅ **100%** (49/49) | ✅ **100%** (44/44) |
 | **Total Cost (USD)** | **$0.0949** | **$0.0051** |
-| **Avg. Cost per Task** | ~$0.0019 | ~$0.0001 |
+| **Avg. Cost per Task** | ~$0.0019 | ~$0.0017 |
 | **LLM Calls** | 406 | 21 |
 | **Total Tokens** | 678,155 | 36,413 |
 | **Wall Time** | 66m 02s | 2m 52s |
