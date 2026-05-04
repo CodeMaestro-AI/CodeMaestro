@@ -8,7 +8,11 @@ CodeMaestro turns developer intent into bounded execution phases where every act
 **Default model:** deepseek-chat
 **Language:** JavaScript (CommonJS)
 
-codeMaestro is a structured code generation pipeline. You give it a task and a list of files; it decomposes the task, generates code in isolated sections, and writes the output -- with a structural safety gate that prevents destructive writes. It produces the same results as agentic coding tools (100% pass rate on 49 exercises and 44 multi-file checks) while using **15-45x fewer tokens**.
+# codeMaestro Alpha
+
+codeMaestro is an alpha AI coding tool built around governed execution instead of open-ended agent loops.
+You give it a task and a bounded file list. The system decomposes the task, generates code in isolated sections, and checks structural invariants before writing.
+The core idea comes from accounting controls: the model should not be the same actor that proposes, verifies, writes, and declares completion.
 
 ---
 
