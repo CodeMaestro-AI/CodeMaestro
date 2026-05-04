@@ -18,8 +18,6 @@ This short demo compares CodeMaestro Alpha against a Claude Code-style baseline 
 
 [Watch the demo video](https://youtu.be/S_-3u3R7db8)
 
-![CodeMaestro Alpha demo: side-by-side benchmark comparison](./docs/assets/codemaestro-alpha-demo-side-by-side.png)
-
 In this run, both systems completed the benchmark successfully:
 
 | System | Score | Wall Time | LLM Calls | Tokens | Estimated Cost |
