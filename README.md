@@ -10,9 +10,26 @@ CodeMaestro turns developer intent into bounded execution phases where every act
 
 codeMaestro is a structured code generation pipeline. You give it a task and a list of files; it decomposes the task, generates code in isolated sections, and writes the output -- with a structural safety gate that prevents destructive writes. It produces the same results as agentic coding tools (100% pass rate on 49 exercises and 44 multi-file checks) while using **15-45x fewer tokens**.
 
-The CLI command is `red-exec`.
-
 ---
+## Benchmark Summaries
+──────────────────────────────────────────────────
+  BENCHMARK SUMMARY  (javascript / red-exec)
+──────────────────────────────────────────────────
+  Score:      49 / 49  (100.0% exercises passed)
+  Wall time:  3962.1s  (polyglot harness)
+  LLM calls:  406
+  **Tokens:        678,155 (406 calls, 3962.1s)
+  Cost (USD): ~$0.0949  (demo: 678155 tokens @ $0.14/M)**
+
+──────────────────────────────────────────────────
+  BENCHMARK SUMMARY  (3 fixtures / red-exec-direct)
+──────────────────────────────────────────────────
+  Score:      44 / 44  (100.0% checks passed)
+  Wall time:  172.1s  (multifile harness)
+  LLM calls:  21
+  **Tokens:        36,413 (21 calls, 172.1s)
+  Cost (USD): ~$0.0051  (demo: 36413 tokens @ $0.14/M)**
+  
 
 ## Quick Start (Standalone Binary)
 
