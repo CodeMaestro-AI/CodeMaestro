@@ -151,14 +151,14 @@ macOS may block `red-exec` on first run with:
 
 This is expected for **unsigned alpha binaries** downloaded directly.
 
-### Option A (recommended): allow via System Settings
+##### Option A (recommended): allow via System Settings
 
 1. Try to open `red-exec` once (so macOS records the block).
 2. Go to **System Settings → Privacy & Security**.
 3. Scroll down to the Security section.
 4. Click **Open Anyway** next to the `red-exec` warning.
 
-### Option B (Terminal): remove the quarantine attribute
+##### Option B (Terminal): remove the quarantine attribute
 
 ```bash
 cd <folder-containing-red-exec>
