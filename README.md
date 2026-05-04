@@ -11,6 +11,28 @@ CodeMaestro turns developer intent into bounded execution phases where every act
 codeMaestro is a structured code generation pipeline. You give it a task and a list of files; it decomposes the task, generates code in isolated sections, and writes the output -- with a structural safety gate that prevents destructive writes. It produces the same results as agentic coding tools (100% pass rate on 49 exercises and 44 multi-file checks) while using **15-45x fewer tokens**.
 
 ---
+
+## Demo: Side-by-side Benchmark
+
+This short demo compares CodeMaestro Alpha against a Claude Code-style baseline on the same `module-split` benchmark.
+
+[Watch the demo video](https://youtu.be/S_-3u3R7db8)
+
+![CodeMaestro Alpha demo: side-by-side benchmark comparison](./docs/assets/codemaestro-alpha-demo-side-by-side.png)
+
+In this run, both systems completed the benchmark successfully:
+
+| System | Score | Wall Time | LLM Calls | Tokens | Estimated Cost |
+|---|---:|---:|---:|---:|---:|
+| Claude baseline | 20 / 20 | 59.0s | 1 | 207,914 | ~$0.1158 |
+| CodeMaestro Alpha | 20 / 20 | 33.4s | 2 | 4,159 | ~$0.0006 |
+
+**Result:** CodeMaestro Alpha completed the same benchmark with approximately **50x fewer tokens** and was approximately **193x cheaper** in this run.
+
+The goal of this demo is not to claim universal performance across all coding tasks. It shows the intended execution model: bounded context, structured execution, and deterministic benchmark completion with substantially lower token usage.
+
+---
+
 ## **Benchmark Summary**
 
 | Metric | Javascript (Polyglot) | Multi-File (Fixtures) |
@@ -23,7 +45,8 @@ codeMaestro is a structured code generation pipeline. You give it a task and a l
 | **Wall Time** | 66m 02s | 2m 52s |
 
 > **Note:** Costs are calculated using DeepSeek-Chat at $0.14/M tokens. 
-  
+
+---
 
 ## Quick Start (Standalone Binary)
 
