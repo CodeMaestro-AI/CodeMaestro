@@ -25,7 +25,7 @@ For the full argument, see [PHILOSOPHY.md](./PHILOSOPHY.md).
 
 ## Demo: Side-by-side Benchmark
 
-This short demo compares CodeMaestro Alpha against a Claude Code baseline on the same `module-split` benchmark.
+This short demo compares CodeMaestro Alpha against a Claude Code baseline on the same `module-split` benchmark. Skip to the end for the results.
 
 [Watch the demo video](https://youtu.be/S_-3u3R7db8)
 
